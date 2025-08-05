@@ -4,18 +4,19 @@ import Link from "next/link";
 import Head from "next/head";
 import { useState } from "react"; 
 
-export default function Home() {
+export default function Gumi() {
   const [isOpen, setIsOpen] = useState(false); 
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-teal-100">
       <Head>
-        <title>Hatsune Miku | Virtual Singer</title>
+        <title>GUMI | Virtual Singer</title>
         <meta
           name="description"
-          content="Official portfolio of Hatsune Miku, the world's most famous virtual singer"
+          content="Official portfolio of GUMI (Megpoid), the versatile virtual singer"
         />
       </Head>
+
       {/* Navigation Bar */}
       <nav className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,47 +24,46 @@ export default function Home() {
             <div className="flex items-center">
               <Link
                 href="/"
-                className="text-xl font-bold text-teal-600 hover:text-teal-800 transition"
+                className="text-xl font-bold text-green-600 hover:text-green-800 transition"
               >
-                HATSUNE MIKU
+                GUMI
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <Link
+                href="/"
+                className="text-gray-700 hover:text-green-600 transition font-medium"
+              >
+                Miku
+              </Link>
+              <Link
                 href="/kaito"
-                className="text-gray-700 hover:text-teal-600 transition font-medium"
+                className="text-gray-700 hover:text-green-600 transition font-medium"
               >
                 KAITO
               </Link>
               <Link
                 href="/meiko"
-                className="text-gray-700 hover:text-teal-600 transition font-medium"
+                className="text-gray-700 hover:text-green-600 transition font-medium"
               >
                 MEIKO
               </Link>
               <Link
                 href="/rinlen"
-                className="text-gray-700 hover:text-teal-600 transition font-medium"
+                className="text-gray-700 hover:text-green-600 transition font-medium"
               >
                 Rin & Len
               </Link>
               <Link
                 href="/luka"
-                className="text-gray-700 hover:text-teal-600 transition font-medium"
+                className="text-gray-700 hover:text-green-600 transition font-medium"
               >
                 Luka
               </Link>
-              <Link
-                href="/gumi"
-                className="text-gray-700 hover:text-teal-600 transition font-medium"
-              >
-                GUMI
-              </Link>
             </div>
             <div className="md:hidden flex items-center">
-              {/* Mobile menu button*/}
               <button
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => setIsOpen(!isOpen)} 
                 className="text-gray-700"
               >
                 <svg
@@ -88,87 +88,88 @@ export default function Home() {
           <div className="md:hidden bg-white/80 backdrop-blur-md shadow-sm">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
+                href="/"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50"
+              >
+                Miku
+              </Link>
+              <Link
                 href="/kaito"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50"
               >
                 KAITO
               </Link>
               <Link
                 href="/meiko"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50"
               >
                 MEIKO
               </Link>
               <Link
                 href="/rinlen"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50"
               >
                 Rin & Len
               </Link>
               <Link
                 href="/luka"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50"
               >
                 Luka
-              </Link>
-              <Link
-                href="/gumi"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
-              >
-                GUMI
               </Link>
             </div>
           </div>
         )}
       </nav>
+
       {/* Hero Section */}
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 space-y-6">
             <h1 className="text-5xl font-bold text-gray-900">
-              <span className="text-teal-500">Hatsune</span> Miku
+              <span className="text-green-500">GUMI</span>
             </h1>
             <p className="text-xl text-gray-600">
-              The world&apos;s most famous virtual singer and cultural icon.
+              The versatile virtual singer with incredible vocal range.
             </p>
             <div className="flex space-x-4">
               <Link
-                href="https://open.spotify.com/artist/6pNgnvzBa6Bthsv8SrZJYl?si=2INgdffsTyytW5HXa1M6Zg"
-                className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg"
+                href="https://open.spotify.com/artist/2XEx6N3gknSmtshM0PVuxu?si=73a1a3ebcd7f495a"
+                className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg"
               >
-                Latest Song
+                Latest Songs
               </Link>
               <Link
                 href="https://mikuexpo.com/asia2025/"
-                className="border-2 border-teal-600 text-teal-600 hover:bg-teal-50 px-6 py-3 rounded-lg font-medium transition"
+                className="border-2 border-green-600 text-green-600 hover:bg-green-50 px-6 py-3 rounded-lg font-medium transition"
               >
                 Upcoming Events
               </Link>
             </div>
           </div>
           <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 bg-teal-100 rounded-full overflow-hidden shadow-xl">
-              {/* Placeholder for Miku image - replace with actual image */}
-              <div className="absolute inset-0 flex items-center justify-center text-teal-400">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 bg-green-100 rounded-full overflow-hidden shadow-xl">
+              <div className="absolute inset-0 flex items-center justify-center text-green-400">
                 <img
                   className="object-cover"
-                  alt="Miku Profile Image"
-                  src="/miku-profile.jpg"
-                ></img>
+                  alt="GUMI Profile Image"
+                  src="/gumi-profile.jpg"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* About Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            About <span className="text-teal-500">Miku</span>
+            About <span className="text-green-500">GUMI</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-              <div className="text-teal-500 mb-4">
+              <div className="text-green-500 mb-4">
                 <svg
                   className="w-10 h-10"
                   fill="currentColor"
@@ -178,14 +179,14 @@ export default function Home() {
                   <path d="M10,20h4a2,2,0,0,1-4,0Zm8-4V10a6,6,0,0,0-5-5.91V3a1,1,0,0,0-2,0V4.09A6,6,0,0,0,6,10v6L4,18H20Z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Vocaloid</h3>
+              <h3 className="text-xl font-semibold mb-2">Megpoid</h3>
               <p className="text-gray-600">
-                Developed by Crypton Future Media, Miku is a Vocaloid software
-                voicebank that allows anyone to create songs with her voice.
+                Developed by Internet Co., Ltd., GUMI (originally Megpoid) is
+                known for her incredible vocal flexibility and range.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-              <div className="text-teal-500 mb-4">
+              <div className="text-green-500 mb-4">
                 <svg
                   className="w-10 h-10"
                   fill="currentColor"
@@ -198,15 +199,14 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">18-Year Legacy</h3>
+              <h3 className="text-xl font-semibold mb-2">16-Year Legacy</h3>
               <p className="text-gray-600">
-                Since her debut in 2007, Miku has become a global phenomenon,
-                performing virtual concerts worldwide with cutting-edge
-                technology.
+                Since her debut in 2009, GUMI has become one of the most popular
+                non-Crypton Vocaloids with a distinctive voice.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-              <div className="text-teal-500 mb-4">
+              <div className="text-green-500 mb-4">
                 <svg
                   className="w-10 h-10"
                   fill="currentColor"
@@ -216,65 +216,66 @@ export default function Home() {
                   <path d="M11.92 47.95h24.31a7.86 7.86 0 0 0 7.86-7.86V23.91a7.86 7.86 0 0 0-7.86-7.86H11.92A7.92 7.92 0 0 0 4 24v16a7.92 7.92 0 0 0 7.92 7.95zM56.15 21.91l-6.32 3.24a3.27 3.27 0 0 0-1.78 2.91v7.87a3.27 3.27 0 0 0 1.77 2.9l6.32 3.25A2.64 2.64 0 0 0 60 39.74V24.26a2.64 2.64 0 0 0-3.85-2.35z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Cultural Icon</h3>
+              <h3 className="text-xl font-semibold mb-2">Vocal Range</h3>
               <p className="text-gray-600">
-                Beyond music, Miku has appeared in video games, commercials, and
-                even as a hologram performing with real musicians.
+                GUMI is known for her ability to handle both powerful rock
+                vocals and soft, emotional ballads with equal skill.
               </p>
             </div>
           </div>
         </div>
       </section>
+
       {/* Discography Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Popular <span className="text-teal-500">Songs</span>
+            Popular <span className="text-green-500">Songs</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "World is Mine",
-                year: "2008",
-                cover: "/albums/World-is-Mine.jpeg",
-                url: "https://youtu.be/EuJ6UR_pD5s?feature=shared",
-              },
-              {
-                title: "Senbonzakura",
+                title: "Ten-Faced",
                 year: "2011",
-                cover: "/albums/senbonzakura.jpg",
-                url: "https://youtu.be/Mqps4anhz0Q?feature=shared",
+                cover: "/albums/ten-faced.jpg",
+                url: "https://www.youtube.com/watch?v=qZwxKQAiZq0&pp=0gcJCfwAo7VqN5tD",
               },
               {
-                title: "Romeo and Cinderella",
-                year: "2009",
-                cover: "/albums/Romeo-and-cinderella.jpg",
-                url: "https://youtu.be/9HrOqmiEsN8?feature=shared",
+                title: "Matryoshka",
+                year: "2010",
+                cover: "/albums/matryoshka.jpg",
+                url: "https://www.youtube.com/watch?v=MzyXD8bNbvk&pp=0gcJCfwAo7VqN5tD",
               },
               {
-                title: "Stage of Sekai (feat. Hatsune Miku)",
-                year: "2022",
-                cover: "/albums/Stage-of-Sekai.jpg",
-                url: "https://youtu.be/YVD1RLI7klc?feature=shared",
+                title: "ECHO",
+                year: "2014",
+                cover: "/albums/echo.jpg",
+                url: "https://www.youtube.com/watch?v=cQKGUgOfD8U",
               },
               {
-                title: "The Future of Beginning",
-                year: "2025",
-                cover: "/albums/The-Future-of-Beginning.jpg",
-                url: "https://www.youtube.com/watch?v=2095cVMqeNA",
+                title: "Mozaik Role",
+                year: "2010",
+                cover: "/albums/mozaik-role.jpg",
+                url: "https://www.youtube.com/watch?v=btgoRSifKOg",
               },
               {
-                title: "Hello, Sekai",
-                year: "2025",
-                cover: "/albums/Hello-sekai.jpg",
-                url: "https://www.youtube.com/watch?v=t5U0rrj0dio",
+                title: "Coward Montblanc",
+                year: "2010",
+                cover: "/albums/coward-montblanc.jpg",
+                url: "https://www.youtube.com/watch?v=7F4Cmu6vF-I",
+              },
+              {
+                title: "Setsuna Trip",
+                year: "2012",
+                cover: "/albums/setsuna-trip.jpg",
+                url: "https://www.youtube.com/watch?v=iOcw6GmQCe4",
               },
             ].map((song, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition transform hover:-translate-y-1"
               >
-                <div className="h-48 bg-teal-100 relative overflow-hidden">
+                <div className="h-48 bg-green-100 relative overflow-hidden">
                   <img
                     src={song.cover}
                     alt={`${song.title} album cover`}
@@ -285,10 +286,14 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900">
                     {song.title}
                   </h3>
-                  <p className="text-teal-600 mt-1">{song.year}</p>
+                  <div className="flex justify-between items-center">
+                    <p className="text-green-600 mt-1">{song.year}</p>
+                  </div>
                   <a
                     href={song.url}
-                    className="mt-4 text-teal-600 hover:text-teal-800 font-medium transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 text-green-600 hover:text-green-800 font-medium transition"
                   >
                     Listen Now →
                   </a>
@@ -298,14 +303,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">Hatsune Miku</h3>
+              <h3 className="text-lg font-semibold mb-4">GUMI</h3>
               <p className="text-gray-400">
-                The virtual diva who changed music forever.
+                The versatile virtual singer with incredible vocal range.
               </p>
             </div>
             <div>
@@ -350,6 +356,14 @@ export default function Home() {
               <ul className="space-y-2">
                 <li>
                   <Link
+                    href="/"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Miku
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/kaito"
                     className="text-gray-400 hover:text-white transition"
                   >
@@ -370,14 +384,6 @@ export default function Home() {
                     className="text-gray-400 hover:text-white transition"
                   >
                     Rin & Len
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/luka"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Luka
                   </Link>
                 </li>
               </ul>
@@ -441,9 +447,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>
-              © {new Date().getFullYear()} Hatsune Miku. All rights reserved.
-            </p>
+            <p>© {new Date().getFullYear()} GUMI. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -4,18 +4,19 @@ import Link from "next/link";
 import Head from "next/head";
 import { useState } from "react"; 
 
-export default function Home() {
-  const [isOpen, setIsOpen] = useState(false); 
+export default function RinLen() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange-100">
       <Head>
-        <title>Hatsune Miku | Virtual Singer</title>
+        <title>Kagamine Rin & Len | Virtual Singers</title>
         <meta
           name="description"
-          content="Official portfolio of Hatsune Miku, the world's most famous virtual singer"
+          content="Official portfolio of Kagamine Rin & Len, the energetic twin Vocaloids"
         />
       </Head>
+
       {/* Navigation Bar */}
       <nav className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,47 +24,46 @@ export default function Home() {
             <div className="flex items-center">
               <Link
                 href="/"
-                className="text-xl font-bold text-teal-600 hover:text-teal-800 transition"
+                className="text-xl font-bold text-yellow-600 hover:text-yellow-800 transition"
               >
-                HATSUNE MIKU
+                KAGAMINE RIN & LEN
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <Link
+                href="/"
+                className="text-gray-700 hover:text-yellow-600 transition font-medium"
+              >
+                Miku
+              </Link>
+              <Link
                 href="/kaito"
-                className="text-gray-700 hover:text-teal-600 transition font-medium"
+                className="text-gray-700 hover:text-yellow-600 transition font-medium"
               >
                 KAITO
               </Link>
               <Link
                 href="/meiko"
-                className="text-gray-700 hover:text-teal-600 transition font-medium"
+                className="text-gray-700 hover:text-yellow-600 transition font-medium"
               >
                 MEIKO
               </Link>
               <Link
-                href="/rinlen"
-                className="text-gray-700 hover:text-teal-600 transition font-medium"
-              >
-                Rin & Len
-              </Link>
-              <Link
                 href="/luka"
-                className="text-gray-700 hover:text-teal-600 transition font-medium"
+                className="text-gray-700 hover:text-yellow-600 transition font-medium"
               >
                 Luka
               </Link>
               <Link
                 href="/gumi"
-                className="text-gray-700 hover:text-teal-600 transition font-medium"
+                className="text-gray-700 hover:text-yellow-600 transition font-medium"
               >
                 GUMI
               </Link>
             </div>
             <div className="md:hidden flex items-center">
-              {/* Mobile menu button*/}
               <button
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => setIsOpen(!isOpen)} 
                 className="text-gray-700"
               >
                 <svg
@@ -88,32 +88,32 @@ export default function Home() {
           <div className="md:hidden bg-white/80 backdrop-blur-md shadow-sm">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
+                href="/"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-yellow-600 hover:bg-gray-50"
+              >
+                Miku
+              </Link>
+              <Link
                 href="/kaito"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-yellow-600 hover:bg-gray-50"
               >
                 KAITO
               </Link>
               <Link
                 href="/meiko"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-yellow-600 hover:bg-gray-50"
               >
                 MEIKO
               </Link>
               <Link
-                href="/rinlen"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
-              >
-                Rin & Len
-              </Link>
-              <Link
                 href="/luka"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-yellow-600 hover:bg-gray-50"
               >
                 Luka
               </Link>
               <Link
                 href="/gumi"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-yellow-600 hover:bg-gray-50"
               >
                 GUMI
               </Link>
@@ -121,160 +121,162 @@ export default function Home() {
           </div>
         )}
       </nav>
+
       {/* Hero Section */}
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 space-y-6">
             <h1 className="text-5xl font-bold text-gray-900">
-              <span className="text-teal-500">Hatsune</span> Miku
+              <span className="text-yellow-500">Kagamine</span> Rin & Len
             </h1>
             <p className="text-xl text-gray-600">
-              The world&apos;s most famous virtual singer and cultural icon.
+              The energetic twin Vocaloids with complementary voices.
             </p>
             <div className="flex space-x-4">
               <Link
-                href="https://open.spotify.com/artist/6pNgnvzBa6Bthsv8SrZJYl?si=2INgdffsTyytW5HXa1M6Zg"
-                className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg"
+                href="https://open.spotify.com/artist/7wZ6E8iVwjGYRGwSfkIAjP?si=8faec3a907444124"
+                className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg"
               >
-                Latest Song
+                Latest Songs
               </Link>
               <Link
                 href="https://mikuexpo.com/asia2025/"
-                className="border-2 border-teal-600 text-teal-600 hover:bg-teal-50 px-6 py-3 rounded-lg font-medium transition"
+                className="border-2 border-yellow-600 text-yellow-600 hover:bg-yellow-50 px-6 py-3 rounded-lg font-medium transition"
               >
                 Upcoming Events
               </Link>
             </div>
           </div>
           <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 bg-teal-100 rounded-full overflow-hidden shadow-xl">
-              {/* Placeholder for Miku image - replace with actual image */}
-              <div className="absolute inset-0 flex items-center justify-center text-teal-400">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 bg-yellow-100 rounded-full overflow-hidden shadow-xl">
+              <div className="absolute inset-0 flex items-center justify-center text-yellow-400">
                 <img
-                  className="object-cover"
-                  alt="Miku Profile Image"
-                  src="/miku-profile.jpg"
-                ></img>
+                  className="object-cover w-full h-full"
+                  alt="Kagamine Rin and Len Profile Image"
+                  src="/rinlen-profile.jpg"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* About Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            About <span className="text-teal-500">Miku</span>
+            About <span className="text-yellow-500">Rin & Len</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-              <div className="text-teal-500 mb-4">
+              <div className="text-yellow-500 mb-4">
                 <svg
                   className="w-10 h-10"
                   fill="currentColor"
+                  viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
                 >
-                  <path d="M10,20h4a2,2,0,0,1-4,0Zm8-4V10a6,6,0,0,0-5-5.91V3a1,1,0,0,0-2,0V4.09A6,6,0,0,0,6,10v6L4,18H20Z" />
+                  <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Vocaloid</h3>
+              <h3 className="text-xl font-semibold mb-2">Twin Vocaloids</h3>
               <p className="text-gray-600">
-                Developed by Crypton Future Media, Miku is a Vocaloid software
-                voicebank that allows anyone to create songs with her voice.
+                Developed by Crypton Future Media, Rin (female) and Len (male)
+                share the same voicebank with different configurations.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-              <div className="text-teal-500 mb-4">
+              <div className="text-yellow-500 mb-4">
                 <svg
                   className="w-10 h-10"
                   fill="currentColor"
+                  viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
                 >
                   <path
-                    d="M256 73.825c-100.617 0-182.18 81.562-182.18 182.17a182.18 182.18 0 1 0 364.36 0c0-100.608-81.563-182.17-182.18-182.17zm79.558 249.213a15.729 15.729 0 0 1-21.462 5.96l-65.848-37.24c-.176-.096-.317-.238-.492-.343a14.239 14.239 0 0 1-1.337-.949c-.404-.307-.79-.615-1.16-.958a13.216 13.216 0 0 1-.994-1.09 15.767 15.767 0 0 1-.994-1.186c-.29-.413-.545-.853-.8-1.284a14.547 14.547 0 0 1-.712-1.31 13.89 13.89 0 0 1-.553-1.459 13.4 13.4 0 0 1-.449-1.414 16.386 16.386 0 0 1-.254-1.486 12.73 12.73 0 0 1-.168-1.635c-.008-.202-.06-.396-.06-.597V149.428a15.75 15.75 0 0 1 31.5 0v119.435l57.848 32.712a15.742 15.742 0 0 1 5.96 21.463z"
-                    data-name="Time 4 O'clock"
-                  />
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                    clipRule="evenodd"
+                  ></path>
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2">18-Year Legacy</h3>
               <p className="text-gray-600">
-                Since her debut in 2007, Miku has become a global phenomenon,
-                performing virtual concerts worldwide with cutting-edge
-                technology.
+                Since their debut in 2007, the twins have become known for their
+                energetic performances and sibling dynamic.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-              <div className="text-teal-500 mb-4">
+              <div className="text-yellow-500 mb-4">
                 <svg
                   className="w-10 h-10"
                   fill="currentColor"
+                  viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 64 64"
                 >
-                  <path d="M11.92 47.95h24.31a7.86 7.86 0 0 0 7.86-7.86V23.91a7.86 7.86 0 0 0-7.86-7.86H11.92A7.92 7.92 0 0 0 4 24v16a7.92 7.92 0 0 0 7.92 7.95zM56.15 21.91l-6.32 3.24a3.27 3.27 0 0 0-1.78 2.91v7.87a3.27 3.27 0 0 0 1.77 2.9l6.32 3.25A2.64 2.64 0 0 0 60 39.74V24.26a2.64 2.64 0 0 0-3.85-2.35z" />
+                  <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v8a2 2 0 01-2 2h-2a2 2 0 01-2-2V6z"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Cultural Icon</h3>
+              <h3 className="text-xl font-semibold mb-2">Dynamic Duo</h3>
               <p className="text-gray-600">
-                Beyond music, Miku has appeared in video games, commercials, and
-                even as a hologram performing with real musicians.
+                Often portrayed with playful sibling rivalry, they bring a
+                unique energy to Vocaloid music and performances.
               </p>
             </div>
           </div>
         </div>
       </section>
+
       {/* Discography Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Popular <span className="text-teal-500">Songs</span>
+            Popular <span className="text-yellow-500">Songs</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "World is Mine",
-                year: "2008",
-                cover: "/albums/World-is-Mine.jpeg",
-                url: "https://youtu.be/EuJ6UR_pD5s?feature=shared",
-              },
-              {
-                title: "Senbonzakura",
+                title: "Meltdown",
                 year: "2011",
-                cover: "/albums/senbonzakura.jpg",
-                url: "https://youtu.be/Mqps4anhz0Q?feature=shared",
+                cover: "/albums/meltdown.jpg",
+                url: "https://www.youtube.com/watch?v=dSw8CucthGc&pp=0gcJCfwAo7VqN5tD",
               },
               {
-                title: "Romeo and Cinderella",
-                year: "2009",
-                cover: "/albums/Romeo-and-cinderella.jpg",
-                url: "https://youtu.be/9HrOqmiEsN8?feature=shared",
+                title: "Remote Control",
+                year: "2017",
+                cover: "/albums/remote-control.jpg",
+                url: "https://www.youtube.com/watch?v=1st0XSY0VKQ&pp=0gcJCfwAo7VqN5tD",
               },
               {
-                title: "Stage of Sekai (feat. Hatsune Miku)",
-                year: "2022",
-                cover: "/albums/Stage-of-Sekai.jpg",
-                url: "https://youtu.be/YVD1RLI7klc?feature=shared",
+                title: "Bring It On",
+                year: "2018",
+                cover: "/albums/bring-it-on.jpg",
+                url: "https://www.youtube.com/watch?v=oEkGC2HV7rc&pp=0gcJCfwAo7VqN5tD",
               },
               {
-                title: "The Future of Beginning",
-                year: "2025",
-                cover: "/albums/The-Future-of-Beginning.jpg",
-                url: "https://www.youtube.com/watch?v=2095cVMqeNA",
+                title: "Servant of Evil",
+                year: "2008",
+                cover: "/albums/servant-of-evil.jpg",
+                url: "https://www.youtube.com/watch?v=Jo7z60aJqNA",
               },
               {
-                title: "Hello, Sekai",
-                year: "2025",
-                cover: "/albums/Hello-sekai.jpg",
-                url: "https://www.youtube.com/watch?v=t5U0rrj0dio",
+                title: "Daughter of Evil",
+                year: "2008",
+                cover: "/albums/daughter-of-evil.jpg",
+                url: "https://youtu.be/uPTk6ogsazE?feature=shared",
+              },
+              {
+                title: "Rin Rin Signal",
+                year: "2008",
+                cover: "/albums/rin-rin-signal.jpg",
+                url: "https://www.youtube.com/watch?v=L-ujYKp0PnI&pp=0gcJCfwAo7VqN5tD",
               },
             ].map((song, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition transform hover:-translate-y-1"
               >
-                <div className="h-48 bg-teal-100 relative overflow-hidden">
+                <div className="h-48 bg-yellow-100 relative overflow-hidden">
                   <img
                     src={song.cover}
                     alt={`${song.title} album cover`}
@@ -285,10 +287,14 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900">
                     {song.title}
                   </h3>
-                  <p className="text-teal-600 mt-1">{song.year}</p>
+                  <div className="flex justify-between items-center">
+                    <p className="text-yellow-600 mt-1">{song.year}</p>
+                  </div>
                   <a
                     href={song.url}
-                    className="mt-4 text-teal-600 hover:text-teal-800 font-medium transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 text-yellow-600 hover:text-yellow-800 font-medium transition"
                   >
                     Listen Now →
                   </a>
@@ -298,14 +304,16 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">Hatsune Miku</h3>
+              <h3 className="text-lg font-semibold mb-4">Kagamine Rin & Len</h3>
               <p className="text-gray-400">
-                The virtual diva who changed music forever.
+                The energetic twin Vocaloids who complement each other
+                perfectly.
               </p>
             </div>
             <div>
@@ -350,6 +358,14 @@ export default function Home() {
               <ul className="space-y-2">
                 <li>
                   <Link
+                    href="/"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Miku
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/kaito"
                     className="text-gray-400 hover:text-white transition"
                   >
@@ -362,14 +378,6 @@ export default function Home() {
                     className="text-gray-400 hover:text-white transition"
                   >
                     MEIKO
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/rinlen"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Rin & Len
                   </Link>
                 </li>
                 <li>
@@ -442,7 +450,8 @@ export default function Home() {
           </div>
           <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
             <p>
-              © {new Date().getFullYear()} Hatsune Miku. All rights reserved.
+              © {new Date().getFullYear()} Kagamine Rin & Len. All rights
+              reserved.
             </p>
           </div>
         </div>
